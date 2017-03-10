@@ -1,0 +1,627 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body{
+  margin: 0 0;
+  cursor: default;
+  -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+  background: url(../img/pic/desktop-hp.jpg) no-repeat center;
+  background-size: 100% 100%;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='img/pic/desktoptop.jpg',
+    sizingMethod='scale');
+}
+.desktop {
+  height: 100%;
+  width: 100%;
+  font-size: 0;
+  font-family: MingLiU;
+}
+/**********************任务栏*********************/
+.taskbar {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background: rgba(30, 37, 46, 0.85);
+}
+.taskbar>div{
+  height: inherit;
+}
+.taskbar .item{
+  margin-right: 1px;
+}
+.taskbar .item:not(.item-switch):hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+.taskbar .item:not(.item-switch):active{
+  background: rgba(255, 255, 255, 0.05);
+}
+.taskbar .items-sys>.item:not(.item-switch):active{
+  background: rgba(255, 255, 255, 0.15);
+}
+.taskbar>.taskbar-left {
+  display: flex;
+  float: left;
+  flex: 1;
+}
+.taskbar>.taskbar-left>div {
+  height: inherit;
+  margin-right: 4px;
+}
+.taskbar .items-sys {
+  display: flex;
+  flex-wrap: wrap;
+}
+.taskbar .items-sys>.item{
+  width: 47px;
+}
+.taskbar .items-task {
+  display: flex;
+  flex: 1;
+}
+.taskbar>.taskbar-left>.responsive.act-hover{
+  position: absolute;
+  z-index: -1;
+  left: 100px;
+  display: none;
+}
+.taskbar>.taskbar-left>.responsive.act-hover:hover{
+  background-color: initial;
+}
+.taskbar>.taskbar-left>.responsive.item-switch:hover~.act-hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+.taskbar>.taskbar-left>.responsive.item-switch:active~.act-hover{
+  background: rgba(255, 255, 255, 0.05);
+}
+.taskbar>.taskbar-left>.responsive.item-switch{
+  display: none;
+  flex: 1;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+.taskbar>.taskbar-left>.responsive.act-hover>.icon-angle.up{
+  display: inline-block;
+  margin: 5px 0px;
+  transform: scale(0.55) rotate(-90deg);
+  top: 1px;
+}
+.taskbar .items-task>.item{
+  max-width: 48px;
+  min-width: 35px;
+  flex: 1;
+}
+.taskbar>.taskbar-left .item {
+  height: 40px;
+  display: inline-block;
+}
+.taskbar>.taskbar-left>.items-task>.item:before {
+  content: '';
+  position: relative;
+  top: 36px;
+  display: inline-block;
+  width: 80%;
+  margin-left: 10%;
+  height: 2px;
+  background-color: #8a9db6;
+}
+.taskbar>.taskbar-left>.items-task>.item:hover:before {
+  content: '';
+  width: 100%;
+  margin-left: 0;
+}
+.taskbar>.taskbar-right {
+  float: right;
+  width: auto;
+}
+.taskbar>.taskbar-right>div {
+  height: inherit;
+  float: right;
+}
+.taskbar>.taskbar-right>.show-desktop {
+  width: 5px;
+  border-left: 1px solid #999;
+}
+.taskbar>.taskbar-right>.manipulation {
+  width: 38px;
+  margin-right: 8px;
+}
+.taskbar>.taskbar-right>.date-time {
+  width: 76px;
+}
+.taskbar>.taskbar-right>.date-time>div {
+  height: 50%;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 150%;
+}
+.taskbar .item.item-bg {
+  width: 23px;
+  height: inherit;
+  display: inline-block;
+}
+.taskbar .more-items-bg {
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 40px;
+  background: rgba(52, 61, 73, 0.9);
+  box-shadow: 0 0 5px 0px;
+  width: 160px;
+  transform: translateX(-43%);
+}
+.taskbar .more-items-bg>.item {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+.taskbar .taskbar-right .item-switch>.act-hover{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: -1;
+}
+.taskbar input[type="checkbox"].more-items-bg-switch {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.taskbar input[type="checkbox"].more-items-bg-switch:checked~.more-items-bg {
+  display: flex;
+}
+.taskbar input[type="checkbox"].more-items-bg-switch:hover~.act-hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.taskbar input[type="checkbox"].more-items-bg-switch:active~.act-hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.taskbar .responsive.item.item-bg.shrinking {
+  display: none;
+}
+@media (max-width: 620px) {
+  .taskbar .responsive.item.item-bg {
+    display: none;
+  }
+  .taskbar .responsive.item.item-bg.shrinking {
+    display: block;
+  }
+}
+@media (max-width: 475px) {
+  .taskbar .responsive.items-task {
+    position: absolute;
+    bottom: 40px;
+    flex-wrap: wrap;
+    width: 240px;
+    height: auto;
+    background: rgba(30, 37, 46, 0.85);
+    box-shadow: 0 0 5px 0px;
+    z-index: -10;
+  }
+  .taskbar .responsive.items-task>.item{
+    min-width: 40px;
+  }
+  .taskbar>.taskbar-left>.responsive.item-switch{
+    display: inline-block;
+  }
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 200px;
+    display: inline-block;
+  }
+  .taskbar>.taskbar-left>input.responsive.item-switch:checked~.items-task{
+    display: none;
+  }
+}
+@media (max-width: 455px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 180px;
+  }
+}
+@media (max-width: 435px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 160px;
+  }
+}
+@media (max-width: 415px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 140px;
+  }
+}
+@media (max-width: 395px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 120px;
+  }
+}
+@media (max-width: 375px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 100px;
+  }
+}
+@media (max-width: 355px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 90px;
+  }
+}
+@media (max-width: 335px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 70px;
+  }
+}
+@media (max-width: 315px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 50px;
+  }
+}
+@media (max-width: 295px){
+  .taskbar>.taskbar-left>.responsive.act-hover{
+    width: 30px;
+  }
+}
+/****************************开始菜单****************************/
+.begin-menu{
+  position: absolute;
+  z-index: 99;
+  bottom: 35px;
+  height: 0;
+  width: 950px;
+  background: rgba(38, 47, 59, 0.9);
+  transition: height,bottom 0.1s,0.1s;
+  transition-timing-function: cubic-bezier(0, 0, 1, 0);
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+/*******菜单基础模块样式*******/
+.begin-menu .item:hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+.begin-menu .item:active{
+  background: rgba(255, 255, 255, 0.15);
+}
+/*滚动条*/
+.begin-menu .scrollbar{
+  height: 100%;
+  width: 12px;
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+}
+.begin-menu .scrollbar>div{
+  position: relative;
+  width: 12px;
+  height: 12px;
+  color: #aaa;
+  font-size: 11px;
+  text-align: center;
+}
+.begin-menu .scrollbar div:not(.scrollbar-slide):hover{
+  background: rgba(255,255,255,0.35);
+}
+.begin-menu .scrollbar div:not(.scrollbar-slide):active{
+  color: #000;
+  background: rgba(255,255,255,0.5);
+}
+.begin-menu .scrollbar>.scrollbar-up:after{
+  content:"^";
+}
+.begin-menu .scrollbar>.scrollbar-slide{
+  flex: 1;
+}
+.begin-menu .scrollbar>.scrollbar-slide>.slide-block{
+  height: 100%;
+  width: inherit;
+  background: rgba(255,255,255,0.15);
+}
+.begin-menu .scrollbar>.scrollbar-down:after{
+  content:"^";
+}
+.begin-menu .scrollbar>.scrollbar-down{
+  transform: rotate(180deg);
+}
+/*菜单开关*/
+input[type="checkbox"].begin-menu-switch {
+  position: absolute;
+  z-index: 101;
+  bottom: 0;
+  width: 46px;
+  height: 46px;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+input[type="checkbox"].begin-menu-switch:hover~.taskbar>.taskbar-left>.items-sys>.item-menu {
+  background: rgba(255, 255, 255, 0.1);
+}
+input[type="checkbox"].begin-menu-switch:active~.taskbar>.taskbar-left>.items-sys>.item-menu {
+  background: rgba(255, 255, 255, 0.15);
+}
+input[type="checkbox"].begin-menu-switch:checked~.taskbar>.taskbar-left>.items-sys>.item-menu {
+  background: rgba(255, 255, 255, 0.2);
+}
+input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
+  bottom: 40px;
+  height: 80%;
+  visibility: visible;
+  transition: height,bottom 0.5s,0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+.begin-menu>div{
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+}
+/*三个模块*/
+.begin-menu>.column-1{
+  width: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.begin-menu>.column-2{
+  width: 233px;
+  margin-right: 17px;
+}
+.begin-menu>.column-3{
+  flex: 1;
+}
+/*模块一*/
+.begin-menu>.column-1>.items-top{
+  margin-top: 5px;
+  width: inherit;
+}
+.begin-menu>.column-1 .item{
+  width: 46px;
+  height: 46px;
+}
+/*模块二*/
+.begin-menu>.column-2>.content{/*藏起滚动条*/
+  height: 100%;
+  width: 270px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.begin-menu>.column-2 .item{
+  height: 34px;
+  box-sizing: border-box;
+  padding: 2px 5px 2px 16px;
+}
+.begin-menu>.column-2>.content>.item:not(.section-title)>span:first-child{
+  height: 30px;
+  width: 30px;
+  background: #515c6b;
+  display: inline-block;
+}
+.begin-menu>.column-2>.content>.item.section-title{
+  font-size: 12px;
+  color: #fff;
+  line-height: 35px;
+}
+.begin-menu>.column-2>.content>.item.section-title:nth-child(1)>span:first-child:before{
+  content: '最近添加';
+}
+/*.begin-menu>.column-2>.content>.section-title:nth-of-type(2)>span:before{
+  content: '最常用';
+}*/
+.begin-menu>.column-2 .item.section-title:active{
+  margin: 0 2px;
+}
+.begin-menu>.column-2>.content>.item:last-child{
+  margin-bottom: 60px;
+}
+.begin-menu>.column-2>.content>.item:first-child{
+  margin-top: 8px;
+}
+.begin-menu>.column-2>.scrollbar{
+  opacity: 0;
+  left: 279px;
+  transition: opacity 0.3s;
+}
+.begin-menu>.column-2>.scrollbar>.scrollbar-slide>.slide-block{
+  height: 70px;
+}
+.begin-menu>.column-2:hover>.scrollbar{
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.begin-menu>.column-3>.scrollbar{
+  opacity: 0;
+  right: 0;
+  transition: opacity 0.3s;
+}
+.begin-menu>.column-3:hover>.scrollbar{
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.begin-menu>.column-3>.content{
+  box-sizing: border-box;
+  padding-right: 3%;
+  width: 105%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+.begin-menu>.column-3>.content>.sub-content{
+  display: inline-block;
+  width: 50%;
+  margin-top: 8px;
+}
+.begin-menu>.column-3>.content>.sub-content>.title{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+}
+.begin-menu>.column-3>.content>.sub-content>.title>span{
+  font-size: 12px;
+  color: #fff;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box{
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #515c6b;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box:not(.box-1){
+  margin: 2px;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box:not(.box-8):not(.box-container):before {
+  content:"";
+  display: inline-block;
+  padding-bottom: 100%;
+  vertical-align: middle;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box:not(.box-container):not(.box-sub):hover{
+  border: 2px solid;
+  border-color: rgba(255,255,255,0.5);
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box:not(.box-container):not(.box-sub):active{
+  border: 0;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes>.box.box-4{
+  width: 100px;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes>.box.box-4>.box-1{
+  width: 48px;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes>.box.box-8{
+  width: 204px;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container {
+  background-color: rgba(0, 0, 0, 0);
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container>.box-1:nth-child(1) {
+  margin: 0 2px 2px 0;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container>.box-1:nth-child(2) {
+  margin: 0 0px 2px 2px;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container>.box-1:nth-child(3) {
+  margin: 2px 2px 0 0;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container>.box-1:nth-child(4) {
+  margin: 2px 0 0 2px;
+}
+.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-sub {
+  opacity: 0;
+}
+.begin-menu>input, .begin-menu>.act-hover{
+  position: absolute;
+  display: none;
+  margin: 0;
+  width: 49.9%;
+  height: 35px;
+  top: 0;
+  z-index: 4;
+  transition: all 0.3s;
+}
+.begin-menu>input{
+  opacity: 0;
+}
+.begin-menu>.act-hover{
+  background: rgb(38, 47, 59);
+  opacity: 0.5;
+  z-index: 3;
+}
+.begin-menu>input:hover+.act-hover{
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.7) inset;
+  opacity: 1;
+}
+.begin-menu>input:active+.act-hover{
+  background: rgb(57, 69, 83);
+}
+.begin-menu>.act-hover.right{
+  left: 50%
+}
+.begin-menu>input.column-switch-2{
+  left: 50%;
+}
+@media (max-width: 930px) {
+  .begin-menu{
+    /*overflow: hidden;*/
+    width: 620px;
+  }
+  .begin-menu>.column-3{
+    width: 330px;
+  }
+  .begin-menu>.column-3>.content{
+    width: 106%;
+  }
+  .begin-menu>.column-3>.content>.sub-content{
+    width: auto;
+  }
+}
+@media (max-width: 580px){
+  .begin-menu>input, .begin-menu>.act-hover{
+    display: block;
+  }
+  .begin-menu{
+    overflow: hidden;
+    width: 330px;
+  }
+  .begin-menu>div{
+    position: absolute;
+    transition: left 0.2s ease-out;
+  }
+  .begin-menu>.column-1{
+    left: -279px;
+  }
+  .begin-menu>.column-1>.items-top{
+    margin-top: 30px;
+  }
+  .begin-menu>.column-2{
+    left: -233px;
+  }
+  .begin-menu>.column-2>.scrollbar{
+    left: 0;
+  }
+  .begin-menu>.column-2>.content{
+    padding-top: 30px;
+  }
+  .begin-menu>.column-3{
+    left: 330px;
+    width: 330px;
+  }
+  .begin-menu>.column-3>.content>.sub-content{
+    margin-top: 35px;
+    width: auto;
+  }
+  .begin-menu>input, .act-hover{
+    display: block;
+  }
+  .begin-menu>input.column-switch-1:checked~.column-1{
+    left: 0;
+  }
+  .begin-menu>input.column-switch-1:checked~.column-2{
+    left: 46px;
+  }
+  .begin-menu>input.column-switch-2:checked~.column-3{
+    left: 0;
+  }
+  .begin-menu>input:checked+.act-hover{
+    background: rgb(49, 59, 72);
+    box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.7) inset;
+  }
+}
