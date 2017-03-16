@@ -24,6 +24,8 @@ body{
 }
 /**********************任务栏*********************/
 .taskbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: fixed;
   z-index: 100;
@@ -48,24 +50,35 @@ body{
   background: rgba(255, 255, 255, 0.15);
 }
 .taskbar>.taskbar-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   float: left;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .taskbar>.taskbar-left>div {
   height: inherit;
   margin-right: 4px;
 }
 .taskbar .items-sys {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .taskbar .items-sys>.item{
   width: 47px;
 }
 .taskbar .items-task {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .taskbar>.taskbar-left>.responsive.act-hover{
   position: absolute;
@@ -84,7 +97,9 @@ body{
 }
 .taskbar>.taskbar-left>.responsive.item-switch{
   display: none;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
   margin: 0;
   opacity: 0;
@@ -92,13 +107,16 @@ body{
 .taskbar>.taskbar-left>.responsive.act-hover>.icon-angle.up{
   display: inline-block;
   margin: 5px 0px;
-  transform: scale(0.55) rotate(-90deg);
+  -webkit-transform: scale(0.55) rotate(-90deg);
+          transform: scale(0.55) rotate(-90deg);
   top: 1px;
 }
 .taskbar .items-task>.item{
   max-width: 48px;
   min-width: 35px;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .taskbar>.taskbar-left .item {
   height: 40px;
@@ -152,13 +170,15 @@ body{
 }
 .taskbar .more-items-bg {
   display: none;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
   bottom: 40px;
   background: rgba(52, 61, 73, 0.9);
   box-shadow: 0 0 5px 0px;
   width: 160px;
-  transform: translateX(-43%);
+  -webkit-transform: translateX(-43%);
+          transform: translateX(-43%);
 }
 .taskbar .more-items-bg>.item {
   width: 40px;
@@ -180,6 +200,8 @@ body{
   z-index: 1;
 }
 .taskbar input[type="checkbox"].more-items-bg-switch:checked~.more-items-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .taskbar input[type="checkbox"].more-items-bg-switch:hover~.act-hover {
@@ -203,7 +225,8 @@ body{
   .taskbar .responsive.items-task {
     position: absolute;
     bottom: 40px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 240px;
     height: auto;
     background: rgba(30, 37, 46, 0.85);
@@ -277,12 +300,20 @@ body{
   height: 0;
   width: 950px;
   background: rgba(38, 47, 59, 0.9);
+  -webkit-transition: height,bottom 0.1s,0.1s;
   transition: height,bottom 0.1s,0.1s;
-  transition-timing-function: cubic-bezier(0, 0, 1, 0);
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 1, 0);
+          transition-timing-function: cubic-bezier(0, 0, 1, 0);
   visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 /*******菜单基础模块样式*******/
 .begin-menu .item:hover{
@@ -297,8 +328,13 @@ body{
   width: 12px;
   position: absolute;
   background: rgba(255,255,255,0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .begin-menu .scrollbar>div{
   position: relative;
@@ -319,7 +355,9 @@ body{
   content:"^";
 }
 .begin-menu .scrollbar>.scrollbar-slide{
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .begin-menu .scrollbar>.scrollbar-slide>.slide-block{
   height: 100%;
@@ -330,7 +368,8 @@ body{
   content:"^";
 }
 .begin-menu .scrollbar>.scrollbar-down{
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*菜单开关*/
 input[type="checkbox"].begin-menu-switch {
@@ -343,21 +382,24 @@ input[type="checkbox"].begin-menu-switch {
   margin: 0;
   padding: 0;
 }
-input[type="checkbox"].begin-menu-switch:hover~.taskbar>.taskbar-left>.items-sys>.item-menu {
+input[type="checkbox"].begin-menu-switch:hover~.item-menu {
   background: rgba(255, 255, 255, 0.1);
 }
-input[type="checkbox"].begin-menu-switch:active~.taskbar>.taskbar-left>.items-sys>.item-menu {
+input[type="checkbox"].begin-menu-switch:active~.item-menu {
   background: rgba(255, 255, 255, 0.15);
 }
-input[type="checkbox"].begin-menu-switch:checked~.taskbar>.taskbar-left>.items-sys>.item-menu {
+input[type="checkbox"].begin-menu-switch:checked~.item-menu {
   background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
   bottom: 40px;
   height: 80%;
   visibility: visible;
+  -webkit-transition: height,bottom 0.5s,0.5s;
   transition: height,bottom 0.5s,0.5s;
-  transition-timing-function: cubic-bezier(0, 1, 0, 1);
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 0, 1);
+          transition-timing-function: cubic-bezier(0, 1, 0, 1);
 }
 .begin-menu>div{
   display: inline-block;
@@ -367,16 +409,25 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
 /*三个模块*/
 .begin-menu>.column-1{
   width: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .begin-menu>.column-2{
   width: 233px;
   margin-right: 17px;
 }
 .begin-menu>.column-3{
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*模块一*/
 .begin-menu>.column-1>.items-top{
@@ -401,18 +452,18 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
   box-sizing: border-box;
   padding: 2px 5px 2px 16px;
 }
-.begin-menu>.column-2>.content>.item:not(.section-title)>span:first-child{
+.begin-menu>.column-2 .item:not(.section-title)>span:first-child{
   height: 30px;
   width: 30px;
   background: #515c6b;
   display: inline-block;
 }
-.begin-menu>.column-2>.content>.item.section-title{
+.begin-menu>.column-2 .item.section-title{
   font-size: 12px;
   color: #fff;
   line-height: 35px;
 }
-.begin-menu>.column-2>.content>.item.section-title:nth-child(1)>span:first-child:before{
+.begin-menu>.column-2 .item.section-title:nth-child(1)>span:first-child:before{
   content: '最近添加';
 }
 /*.begin-menu>.column-2>.content>.section-title:nth-of-type(2)>span:before{
@@ -421,31 +472,35 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
 .begin-menu>.column-2 .item.section-title:active{
   margin: 0 2px;
 }
-.begin-menu>.column-2>.content>.item:last-child{
+.begin-menu>.column-2 .item:last-child{
   margin-bottom: 60px;
 }
-.begin-menu>.column-2>.content>.item:first-child{
+.begin-menu>.column-2 .item:first-child{
   margin-top: 8px;
 }
 .begin-menu>.column-2>.scrollbar{
   opacity: 0;
   left: 279px;
+  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-.begin-menu>.column-2>.scrollbar>.scrollbar-slide>.slide-block{
+.begin-menu>.column-2>.scrollbar .slide-block{
   height: 70px;
 }
 .begin-menu>.column-2:hover>.scrollbar{
   opacity: 1;
+  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .begin-menu>.column-3>.scrollbar{
   opacity: 0;
   right: 0;
+  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .begin-menu>.column-3:hover>.scrollbar{
   opacity: 1;
+  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .begin-menu>.column-3>.content{
@@ -456,75 +511,83 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
   overflow-x: hidden;
   overflow-y: visible;
 }
-.begin-menu>.column-3>.content>.sub-content{
+.begin-menu>.column-3 .sub-content{
   display: inline-block;
   width: 50%;
   margin-top: 8px;
 }
-.begin-menu>.column-3>.content>.sub-content>.title{
+.begin-menu>.column-3 .title{
   width: 100%;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 2px;
 }
-.begin-menu>.column-3>.content>.sub-content>.title>span{
+.begin-menu>.column-3 .title>span{
   font-size: 12px;
   color: #fff;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes{
+.begin-menu>.column-3 .boxes{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 30px;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box{
+.begin-menu>.column-3 .box{
   display: inline-block;
   position: relative;
+  z-index: 1;
   box-sizing: border-box;
   background-color: #515c6b;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box:not(.box-1){
+.begin-menu>.column-3 .box:not(.box-1){
   margin: 2px;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box:not(.box-8):not(.box-container):before {
+.begin-menu>.column-3 .box:not(.box-8):not(.box-container):before {
   content:"";
   display: inline-block;
   padding-bottom: 100%;
   vertical-align: middle;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box:not(.box-container):not(.box-sub):hover{
-  border: 2px solid;
-  border-color: rgba(255,255,255,0.5);
+.begin-menu>.column-3 .box:not(.box-container):not(.box-sub):hover{
+  outline: 2px solid rgba(255,255,255,0.5);
+  outline-offset: -2px;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box:not(.box-container):not(.box-sub):active{
-  border: 0;
+.begin-menu>.column-3 .box:not(.box-container):not(.box-sub):active{
+  outline-style: none;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes>.box.box-4{
+.begin-menu>.column-3 .box.box-4{
   width: 100px;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes>.box.box-4>.box-1{
+.begin-menu>.column-3 .box.box-4>.box-1{
   width: 48px;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes>.box.box-8{
+.begin-menu>.column-3 .box.box-8{
   width: 204px;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container {
+.begin-menu>.column-3 .box.box-4.box-container {
   background-color: rgba(0, 0, 0, 0);
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container>.box-1:nth-child(1) {
+.begin-menu>.column-3 .box.box-4.box-container>.box-1:nth-child(1) {
   margin: 0 2px 2px 0;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container>.box-1:nth-child(2) {
+.begin-menu>.column-3 .box.box-4.box-container>.box-1:nth-child(2) {
   margin: 0 0px 2px 2px;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container>.box-1:nth-child(3) {
+.begin-menu>.column-3 .box.box-4.box-container>.box-1:nth-child(3) {
   margin: 2px 2px 0 0;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-4.box-container>.box-1:nth-child(4) {
+.begin-menu>.column-3 .box.box-4.box-container>.box-1:nth-child(4) {
   margin: 2px 0 0 2px;
 }
-.begin-menu>.column-3>.content>.sub-content>.boxes .box.box-sub {
+.begin-menu>.column-3 .box.box-sub {
   opacity: 0;
 }
 .begin-menu>input, .begin-menu>.act-hover{
@@ -535,6 +598,7 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
   height: 35px;
   top: 0;
   z-index: 4;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .begin-menu>input{
@@ -583,6 +647,7 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
   }
   .begin-menu>div{
     position: absolute;
+    -webkit-transition: left 0.2s ease-out;
     transition: left 0.2s ease-out;
   }
   .begin-menu>.column-1{
