@@ -16,8 +16,10 @@
   margin: auto 0;
   right: 2px;
   box-shadow: inset 0 0 0 32px #fff;
-  transform-origin: right;
-  transform: rotate(45deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .desktop .icon-angle:after{
   content: '';
@@ -30,27 +32,35 @@
   margin: auto 0;
   right: 2px;
   box-shadow: inset 0 0 0 32px #fff;
-  transform-origin: right;
-  transform: rotate(-45deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .desktop .icon-angle.up{
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 .desktop .icon-angle.down{
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .desktop .icon-angle.left{
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*菜单*/
 .desktop>.taskbar>.taskbar-left>.items-sys>.item-menu {
-  perspective: 3px;
-  perspective-origin: 100% 50%;
+  -webkit-perspective: 3px;
+          perspective: 3px;
+  -webkit-perspective-origin: 100% 50%;
+          perspective-origin: 100% 50%;
 }
 .desktop>.taskbar>.taskbar-left>.items-sys>.item-menu>span {
   width: 46px;
   height: 15px;
-  transform: rotateY(177.7deg) scaleX(0.43);
+  -webkit-transform: rotateY(177.7deg) scaleX(0.43);
+          transform: rotateY(177.7deg) scaleX(0.43);
   display: block;
   position: relative;
   top: 12px;
@@ -93,7 +103,8 @@
   display: block;
   position: relative;
   box-shadow: 0px 4px 0px 0px #fff, 0px 8px 0px 0px #fff;
-  transform: scaleY(0.8);
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
   margin: auto;
   top: 19px;
 }
@@ -103,7 +114,8 @@
   border: 2px #fff solid;
   border-top-color: transparent;
   border-radius: 100%;
-  transform: rotate(26deg) scale(0.8);
+  -webkit-transform: rotate(26deg) scale(0.8);
+          transform: rotate(26deg) scale(0.8);
   display: block;
   position: relative;
   margin: auto;
@@ -119,7 +131,8 @@
   border: 2px #fff solid;
   border-top-color: transparent;
   border-radius: 100%;
-  transform: rotate(-52deg);
+  -webkit-transform: rotate(-52deg);
+          transform: rotate(-52deg);
 }
 .desktop>.begin-menu>.column-1>.items-bottom>.item:nth-child(4)>span:after{
   content: '';
@@ -130,7 +143,8 @@
   top: -4px;
   left: 3px;
   background: #fff;
-  transform: rotate(-26deg);
+  -webkit-transform: rotate(-26deg);
+          transform: rotate(-26deg);
 }
 .desktop>.begin-menu>.column-1>.items-bottom>.item:nth-child(3)>span {
   height: 14px;
@@ -152,7 +166,8 @@
   border-radius: 100%;
   display: block;
   position: relative;
-  transform: translateY(4%);
+  -webkit-transform: translateY(4%);
+          transform: translateY(4%);
 }
 .desktop>.begin-menu>.column-1>.items-bottom>.item:nth-child(3)>span:after{
   content: '';
@@ -164,7 +179,8 @@
   border-radius: 100%;
   display: block;
   position: absolute;
-  transform: translate(4%,7%);
+  -webkit-transform: translate(4%,7%);
+          transform: translate(4%,7%);
 }
 .desktop>.begin-menu>.column-1>.items-bottom>.item:nth-child(2)>span {
   width: 12px;
@@ -176,7 +192,8 @@
   position: relative;
   margin-left: 19px;
   top: 14px;
-  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 .desktop>.begin-menu>.column-1>.items-bottom>.item:nth-child(2)>span:before{
   content: "";
@@ -219,7 +236,8 @@
   top: 4px;
   border-radius: 100%;
   border: 1px solid #fff;
-  transform: translate(7%, 7%);
+  -webkit-transform: translate(7%, 7%);
+          transform: translate(7%, 7%);
 }
 .desktop>.begin-menu>.column-1>.items-bottom>.item:nth-child(1)>span:after{
   content: "";
@@ -231,11 +249,13 @@
   border-radius: 100%;
   border: solid #fff;
   border-width: 1px 0 0 1px;
-  transform: rotate(45deg) translateX(7%);
+  -webkit-transform: rotate(45deg) translateX(7%);
+          transform: rotate(45deg) translateX(7%);
 }
 
 /*任务栏*/
 .desktop>.taskbar>.taskbar-right .icon-angle.up{
-  transform: scale(0.55) rotate(-90deg);
+  -webkit-transform: scale(0.55) rotate(-90deg);
+          transform: scale(0.55) rotate(-90deg);
   top: 6px;
 }
