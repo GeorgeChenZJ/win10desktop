@@ -470,7 +470,8 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
   content: '最常用';
 }*/
 .begin-menu>.column-2 .item.section-title:active{
-  margin: 0 2px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 .begin-menu>.column-2 .item:last-child{
   margin-bottom: 60px;
@@ -547,6 +548,18 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
   box-sizing: border-box;
   background-color: #515c6b;
 }
+.begin-menu>.column-3 .box:after{
+  content: attr(data-title);
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  left: 8px;
+  bottom: 5px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width: 85%;
+}
 .begin-menu>.column-3 .box:not(.box-1){
   margin: 2px;
 }
@@ -563,31 +576,31 @@ input[type="checkbox"].begin-menu-switch:checked+.begin-menu{
 .begin-menu>.column-3 .box:not(.box-container):not(.box-sub):active{
   outline-style: none;
 }
-.begin-menu>.column-3 .box.box-4{
+.begin-menu>.column-3 .box-4{
   width: 100px;
 }
-.begin-menu>.column-3 .box.box-4>.box-1{
+.begin-menu>.column-3 .box-4>.box-1{
   width: 48px;
 }
-.begin-menu>.column-3 .box.box-8{
+.begin-menu>.column-3 .box-8{
   width: 204px;
 }
-.begin-menu>.column-3 .box.box-4.box-container {
+.begin-menu>.column-3 .box-4.box-container {
   background-color: rgba(0, 0, 0, 0);
 }
-.begin-menu>.column-3 .box.box-4.box-container>.box-1:nth-child(1) {
+.begin-menu>.column-3 .box-4.box-container>.box-1:nth-child(1) {
   margin: 0 2px 2px 0;
 }
-.begin-menu>.column-3 .box.box-4.box-container>.box-1:nth-child(2) {
+.begin-menu>.column-3 .box-4.box-container>.box-1:nth-child(2) {
   margin: 0 0px 2px 2px;
 }
-.begin-menu>.column-3 .box.box-4.box-container>.box-1:nth-child(3) {
+.begin-menu>.column-3 .box-4.box-container>.box-1:nth-child(3) {
   margin: 2px 2px 0 0;
 }
-.begin-menu>.column-3 .box.box-4.box-container>.box-1:nth-child(4) {
+.begin-menu>.column-3 .box-4.box-container>.box-1:nth-child(4) {
   margin: 2px 0 0 2px;
 }
-.begin-menu>.column-3 .box.box-sub {
+.begin-menu>.column-3 .box-sub {
   opacity: 0;
 }
 .begin-menu>input, .begin-menu>.act-hover{
