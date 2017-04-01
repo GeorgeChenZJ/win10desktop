@@ -12,99 +12,99 @@
   <body>
     <div class="desktop">
       <div class="window-container" id="window_container"></div>
-      <input type="checkbox" class="begin-menu-switch">
+      <input type="checkbox" class="switch" id="begin-menu-switch">
       <div class="begin-menu">
-          <input type="radio" name="switch" class="column-switch-1" checked="checked">
-          <div class="act-hover"></div>
-          <input type="radio" name="switch" class="column-switch-2">
-          <div class="act-hover right"></div>
-          <div class="column-1">
+          <input type="radio" name="bm-col-switch" class="switch" id="bm-col-switch-1" checked="checked">
+          <div class="act-hover act-hover-bm-col-switch"></div>
+          <input type="radio" name="bm-col-switch" class="switch" id="bm-col-switch-2">
+          <div class="act-hover act-hover-bm-col-switch right"></div>
+          <div class="bm-col" id="bm-col-1">
             <div class="items-top">
-              <div class="item"><span></span></div>
+              <div class="item-bm"><span id="item-bm-unfold-span"></span></div>
             </div>
             <div class="items-bottom">
-              <div class="item"><span></span></div>
-              <div class="item"><span></span></div>
-              <div class="item"><span></span></div>
-              <div class="item"><span></span></div>
+              <div class="item-bm"><span id="item-bm-user-span"></span></div>
+              <div class="item-bm"><span id="item-bm-file-expr-span"></span></div>
+              <div class="item-bm"><span id="item-bm-config-span"></span></div>
+              <div class="item-bm"><span id="item-bm-shutdown-span"></span></div>
             </div>
           </div>
-          <div class="column-2">
-            <div class="scrollbar">
-              <div class="scrollbar-up"></div>
-              <div class="scrollbar-slide">
-                <div class="slide-block"></div>
+          <div class="bm-col" id="bm-col-2">
+            <div class="scrollbar-bm">
+              <div class="scrollbar-bm-up"><span class="icon-angle up sm scrollbar-bm-angle"></span></div>
+              <div class="scrollbar-bm-slide">
+                <div class="scrollbar-bm-slide-block"></div>
               </div>
-              <div class="scrollbar-down"></div>
+              <div class="scrollbar-bm-down"><span class="icon-angle down sm scrollbar-bm-angle"></span></div>
             </div>
-            <div class="content">
-              <div class="item section-title"><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>最常用</span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>#</span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>A</span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>B</span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>C</span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>D</span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>E</span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>F</span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item section-title"><span>G</span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
-              <div class="item"><span></span><span></span></div>
+            <div class="content" id="bm-col-2-content">
+              <div class="item-bm section-title"><span>最近添加</span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>最常用</span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>#</span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>A</span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>B</span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>C</span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>D</span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>E</span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>F</span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm section-title"><span>G</span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
+              <div class="item-bm"><span class="bm-col-2-icon"></span><span></span></div>
             </div>
           </div>
-          <div class="column-3">
-            <div class="scrollbar">
-              <div class="scrollbar-up"></div>
-              <div class="scrollbar-slide">
-                <div class="slide-block"></div>
+          <div class="bm-col" id="bm-col-3">
+            <div class="scrollbar-bm">
+              <div class="scrollbar-bm-up"><span class="icon-angle up sm scrollbar-bm-angle"></span></div>
+              <div class="scrollbar-bm-slide">
+                <div class="scrollbar-bm-slide-block"></div>
               </div>
-              <div class="scrollbar-down"></div>
+              <div class="scrollbar-bm-down"><span class="icon-angle down sm scrollbar-bm-angle"></span></div>
             </div>
-            <div class="content">
+            <div class="content" id="bm-col-3-content">
               <div class="sub-content">
                 <div class="title"><span>生活动态</span></div>
                 <div class="boxes">
@@ -145,8 +145,8 @@
                     </div>
                   </div>
                   <div class="box box-4" style="background-color:#0078d7"></div>
-                  <div class="box box-4" style="background-color:#515c6b"></div>
-                  <div class="box box-4" style="background-color:#515c6b"></div>
+                  <div class="box box-4" data-title="QQ" style="background-color:#515c6b"><span id="box-QQ-span"><span id="box-QQ-span-sub"></span></span></div>
+                  <div class="box box-4" data-title="WeChat" style="background-color:#515c6b"><span class="icon-WeChat" id="box-WeChat-span"><span class="icon-WeChat-sub1"></span><span class="icon-WeChat-sub2"></span></span></div>
                   <div class="box box-4" style="background-color:#515c6b"></div>
                 </div>
               </div>
@@ -154,14 +154,32 @@
                 <div class="title"><span>播放和浏览</span></div>
                 <div class="boxes">
                   <div class="box box-4" style="background-color:#107c10"></div>
-                  <div class="box box-4" style="background-color:#515c6b"></div>
+                  <div class="box box-4" data-title="Groove音乐" style="background-color:#515c6b"><span class="icon-groove" id="box-groove-span"><span class="icon-groove-centre"></span></span></div>
                   <div class="box box-4" data-title="电影和电视" style="background-color:#515c6b"><span id="box-video-span"></span></div>
-                  <div class="box box-4" style="background-color:#1a478b"></div>
+                  <div class="box box-4" data-title="BBC新闻" style="background-color:#9c0a0d"><span id="box-BBC-span"></span></div>
+                  <div class="box box-4" data-title="酷狗音乐" style="background-color:#1a478b"><span class="icon-kugou" id="box-kugou-span"></span></div>
                   <div class="box box-4" style="background-color:#0078d7"></div>
-                  <div class="box box-4" style="background-color:#e20000"></div>
-                  <div class="box box-4" style="background-color:#515c6b"></div>
+                  <div class="box box-4" data-title="Google Chrome" style="background-color:#212121">
+                    <span class="icon-chrome-normal" id="box-chrome-span">
+                      <span class="icon-chrome-normal-part icon-chrome-normal-part-red"></span>
+                      <span class="icon-chrome-normal-part icon-chrome-normal-part-yellow"></span>
+                      <span class="icon-chrome-normal-part icon-chrome-normal-part-green"></span>
+                      <span class="icon-chrome-normal-mask icon-chrome-normal-mask-yellow"></span>
+                      <span class="icon-chrome-normal-mask icon-chrome-normal-mask-green"></span>
+                      <span class="icon-chrome-normal-part icon-chrome-normal-part-red2"></span>
+                      <span class="icon-chrome-normal-centre-white">
+                        <span class="icon-chrome-normal-centre"></span>
+                      </span>
+                    </span>
+                  </div>
                   <div class="box box-8" data-title="资讯" style="background-color:#d13438"><span id="box-info-span"><span id="box-info-span-sub"></span></span></div>
-                  <div class="box box-4" style="background-color:#515c6b"></div>
+                  <div class="box box-4" data-title="Atom" style="background-color:#515c6b">
+                    <span class="icon-atom icon-atom-outline" id="box-atom-span">
+                      <span class="icon-atom-oval"></span>
+                      <span class="icon-atom-oval icon-atom-oval-1"></span>
+                      <span class="icon-atom-oval icon-atom-oval-2"></span>
+                    </span>
+                  </div>
                   <div class="box box-4" data-title="OneNote" style="background-color:#80397b"><span id="box-OneNote-span"><span id="box-OneNote-span-sub">N</span></span></div>
                   <div class="box box-4 box-container">
                     <div class="box box-1 box-Word" style="background-color:#4269a5"><span id="box-Word-span"><span id="box-Word-span-sub">W</span></span></div>
@@ -178,28 +196,41 @@
       <div class="taskbar">
           <div class="taskbar-left">
             <div class="items-sys">
-              <div class="item item-menu item-switch">
-                <span></span>
+              <div class="item" id="item-menu">
+                <span id="item-menu-span"></span>
               </div>
-              <div class="item item-cortana">
-                <span></span>
+              <div class="item" id="item-cortana">
+                <span id="item-cortana-span"></span>
               </div>
             </div>
-            <input type="checkbox" class="item-switch responsive">
-            <div class="item act-hover responsive"><span class="icon-angle up"></span></div>
-            <div class="items-task responsive">
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
+            <input type="checkbox" class="switch resp-max486" id="items-task-switch">
+            <div class="item act-hover resp-max486" id="act-hover-items-task-switch"><span class="icon-angle up" id="act-hover-items-task-switch-span"></span></div>
+            <div class="items-task resp-pos486">
+              <div class="item item-task"><span class="item-task-icon-ct"><span class="icon-task icon-files"></span></span></div>
+              <div class="item item-task"><span class="item-task-icon-ct">
+                <span class="icon-task icon-chrome-small">
+                  <span class="icon-chrome-small-part-united"></span>
+                  <span class="icon-chrome-small-centre"></span>
+                </span>
+              </span></div>
+              <div class="item item-task"><span class="item-task-icon-ct"><span class="icon-task icon-default-c"></span></span></div>
+              <div class="item item-task"><span class="item-task-icon-ct"><span class="icon-kugou" id="item-task-kugou-span"></span></span></div>
+              <div class="item item-task">
+                <span class="item-task-icon-ct">
+                  <span class="icon-atom" id="item-task-atom-span">
+                    <span class="icon-atom-oval"></span>
+                    <span class="icon-atom-oval icon-atom-oval-1"></span>
+                    <span class="icon-atom-oval icon-atom-oval-2"></span>
+                  </span>
+                </span>
+              </div>
+              <div class="item item-task"><span class="item-task-icon-ct"><span class="icon-task icon-WeChat coloured-WeChat"><span class="icon-WeChat-sub1"></span><span class="icon-WeChat-sub2"></span></span></span></div>
             </div>
           </div>
           <div class="taskbar-right">
-              <div class="item show-desktop"></div>
-              <div class="item manipulation"></div>
-              <div class="item date-time">
+              <div class="item item-r" id="item-show-desktop"></div>
+              <div class="item item-r" id="item-manipulation"><span id="item-manipulation-span"></span></div>
+              <div class="item item-r" id="item-date-time">
                 <div class="time">
                   <span>10:10</span>
                 </div>
@@ -207,41 +238,41 @@
                   <span>2017/3/3</span>
                 </div>
               </div>
-              <div class="items">
-                <div class="item item-bg item-switch">
-                  <input class="more-items-bg-switch" type="checkbox">
-                  <div class="more-items-bg">
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <div class="item item-bg shrinking"></div>
-                    <!--显示的副本-->
-                    <div class="item item-bg shrinking responsive"></div>
-                    <div class="item item-bg shrinking responsive"></div>
-                    <div class="item item-bg shrinking responsive"></div>
-                    <div class="item item-bg shrinking responsive"></div>
-                    <div class="item item-bg shrinking responsive"></div>
-                    <div class="item item-bg shrinking responsive"></div>
+              <div class="item-r items-bg">
+                <div class="item item-bg switch" id="item-switch-bg">
+                  <input class="switch" id="more-bg-switch" type="checkbox">
+                  <div class="act-hover" id="act-hover-more-bg-switch"></div>
+                  <span class="icon-angle up" id="more-bg-switch-span"></span>
+                  <div id="more-items-bg">
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"><span class="icon-default-a"></span></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"><span class="icon-default-c"></span></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"><span class="icon-default-b"></span></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"><span class="icon-default-a"></span></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"><span class="icon-default-b"></span></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"><span class="icon-default-b"></span></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"><span class="icon-kugou-sm"></span></span></div>
+                    <div class="item item-bg item-bg-sk"><span class="item-bg-sk-icon"><span class="microphone-bg-span"></span></span></div>
+                    <!--在显示的item-bg的副本，屏幕缩小时显示-->
+                    <div class="item item-bg-sk resp-max620"><span class="item-bg-sk-icon"><span class="icon-WeChat coloured-WeChat WeChat-bg-span"><span class="icon-WeChat-sub1"></span><span class="icon-WeChat-sub2"></span></span></span></div>
+                    <div class="item item-bg-sk resp-max620"><span class="item-bg-sk-icon"><span class="youtube-bg-span"></span></span></div>
+                    <div class="item item-bg-sk resp-max620"><span class="item-bg-sk-icon"><span class="battery-bg-span"></span></span></div>
+                    <div class="item item-bg-sk resp-max620"><span class="item-bg-sk-icon"><span class="volume-bg-span"></span></span></div>
+                    <div class="item item-bg-sk resp-max620"><span class="item-bg-sk-icon WLAN-bg-span"><span class="WLAN-bg-span-sub"></span></span></div>
+                    <div class="item item-bg-sk resp-max620"><span class="item-bg-icon input-language-bg-span" data-content="英"></span></div>
                   </div>
-                  <div class="act-hover"></div>
-                  <span class="icon-angle up"></span>
                 </div>
-                <div class="item item-bg responsive"></div>
-                <div class="item item-bg responsive"></div>
-                <div class="item item-bg responsive"></div>
-                <div class="item item-bg responsive"></div>
-                <div class="item item-bg responsive"></div>
-                <div class="item item-bg responsive"></div>
+                <div class="item item-bg resp-min620"><span class="item-bg-icon"><span class="icon-WeChat coloured-WeChat WeChat-bg-span"><span class="icon-WeChat-sub1"></span><span class="icon-WeChat-sub2"></span></span></span></div>
+                <div class="item item-bg resp-min620"><span class="item-bg-icon"><span class="youtube-bg-span"></span></span></div>
+                <div class="item item-bg resp-min620"><span class="item-bg-icon"><span class="battery-bg-span"></span></span></div>
+                <div class="item item-bg resp-min620"><span class="item-bg-icon"><span class="volume-bg-span"></span></span></div>
+                <div class="item item-bg resp-min620"><span class="item-bg-icon WLAN-bg-span"><span class="WLAN-bg-span-sub"></span></span></div>
+                <div class="item item-bg resp-min620"><span class="item-bg-icon input-language-bg-span" data-content="英"></span></div>
               </div>
           </div>
       </div>
