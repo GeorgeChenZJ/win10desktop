@@ -540,16 +540,20 @@
   content: attr(data-week);
   font-size: 12px;
   position: absolute;
-  left: 32px;
+  left: 0;
   top: 20px;
+  text-align: center;
+  width: 100%;
 }
 #box-date-span:after{
   content: attr(data-day);
   font-size: 40px;
   font-weight: lighter;
   position: absolute;
-  left: 30px;
+  left: 0;
   top: 33px;
+  text-align: center;
+  width: 100%;
 }
 /*资讯*/
 #box-info-span{
@@ -600,4 +604,145 @@
   width: 5px;
   height: 4px;
   background: #fff;
+}
+/*QQ*/
+#box-QQ-span{
+  width: 37px;
+  height: 42px;
+  border-radius: 48% 48% 40% 40%;
+  background: #fff;
+  display: block;
+  position: absolute;
+  left: 31px;
+  top: 18px;
+}
+#box-QQ-span:before{
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 45px;
+  border-radius: 48% 48% 40% 40%;
+  background: #fff;
+  left: -3px;
+  top: 13px;
+}
+#box-QQ-span:after{
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 0 100% 0 0;
+  width: 30px;
+  height: 0px;
+  border-top: 6px solid #fff;
+  border-bottom: 1px solid #fff;
+  left: 24px;
+  top: 31px;
+  -webkit-transform: rotate(63deg);
+          transform: rotate(63deg);
+}
+#box-QQ-span-sub{
+  position: absolute;
+  background: #fff;
+  border-radius: 100% 0 0 20%;
+  width: 30px;
+  height: 0px;
+  border-top: 6px solid #fff;
+  border-bottom: 1px solid #fff;
+  left: -17px;
+  top: 31px;
+  -webkit-transform: rotate(-63deg);
+          transform: rotate(-63deg);
+}
+#box-QQ-span-sub:before{
+  content: "";
+  position: absolute;
+  background: #aaa;
+  border-radius: 100% 0 30% 20%;
+  width: 20px;
+  height: 0px;
+  border-top: 5px solid #fff;
+  border-bottom: 1px solid #fff;
+  left: -10px;
+  top: 15px;
+  -webkit-transform: rotate(63deg);
+          transform: rotate(63deg);
+}
+#box-QQ-span-sub:after{
+  content: "";
+  position: absolute;
+  background: #aaa;
+  border-radius: 0 100% 30% 20%;
+  width: 18px;
+  height: 0px;
+  border-top: 5px solid #fff;
+  border-bottom: 1px solid #fff;
+  left: -1px;
+  top: 31px;
+  -webkit-transform: rotate(63deg);
+          transform: rotate(63deg);
+}
+#box-WeChat-span{
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  top: 28px;
+  left: 27px;
+}
+#box-WeChat-span>.icon-WeChat-sub2{
+  box-shadow: 0 0 0 2px #515c6b;
+}
+#box-BBC-span{
+  width: 70px;
+  height: 70px;
+  display: block;
+  position: absolute;
+  background: #9c0a0d;
+  border-radius: 15%;
+  top: 0;
+  margin: 15px 15px;
+}
+#box-BBC-span:before{
+  content: "BBC";
+  letter-spacing: 8px;
+  text-indent: 3px;
+  font-family: "Century Gothic";
+  background-color: #fff;
+  color: #9c0a0d;
+  font-size: 14px;
+  text-shadow: 1px 0px 0px #9c0a0d;
+  width: 14px;
+  height: 14px;
+  box-shadow: 17px 0 #fff, 34px 0 #fff;
+  white-space: nowrap;
+  overflow: visible;
+  position: absolute;
+  top: 17px;
+  left: 11px;
+}
+#box-BBC-span:after{
+  content: "NEWS";
+  font-family: "Tahoma";
+  font-size: 19px;
+  position: absolute;
+  top: 30px;
+  left: 6px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+#box-chrome-span{
+  top: 20px;
+  left: 20px;
+}
+#box-atom-span{
+  top: 18px;
+  left: 18px;
+}
+#box-kugou-span{
+  top: 18px;
+  left: 20px;
+}
+#box-groove-span{
+  top: 33px;
+  left: 33px;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
 }
