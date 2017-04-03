@@ -275,6 +275,7 @@
   top: 15px;
   left: -4px;
   -webkit-transform: rotate(117deg);
+          transform: rotate(117deg);
   border-top-left-radius: 17%;
   background: #4DB749;
   background: -webkit-gradient(radial, 30% 40%, 120, 30% 40%, 60, from(#419643), to(#4DB749));
@@ -284,12 +285,14 @@
   top: 22px;
   right: -3px;
   -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
 }
 .icon-chrome-normal-mask-green{
   z-index: 6;
   top: 37px;
   left: 9px;
   -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
 }
 .icon-chrome-normal-part-red2{
   z-index: 9;
@@ -298,6 +301,7 @@
   top: 10px;
   left: 4px;
   -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
   background: #e85452;
   background: -webkit-gradient(radial, 30% 0, 30, 40% 30%, 60, from(#e85452), to(#E12F35));
 }
@@ -377,6 +381,7 @@
   top: 12px;
   left: 6px;
   -webkit-transform: rotate(57deg);
+          transform: rotate(57deg);
   border-top-left-radius: 17%;
   background: #4DB749;
   background: -webkit-gradient(radial, 30% 40%, 120, 30% 40%, 60, from(#419643), to(#4DB749));
@@ -394,6 +399,7 @@
   top: 6px;
   left: 2px;
   -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
   background: #e85452;
   background: -webkit-gradient(radial, 30% 0, 30, 40% 30%, 60, from(#e85452), to(#E12F35));
 }
@@ -605,6 +611,253 @@
           transform: translate(5%, 5%);
 }
 
+.icon-teamviewer{
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 5%;
+  background: #0a79d9;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(15,140,228,1)), color-stop(100%, rgba(7,100,197,1)));
+  background: -webkit-linear-gradient(top, rgba(15,140,228,1) 0%, rgba(7,100,197,1) 100%);
+  background: linear-gradient(to bottom, rgba(15,140,228,1) 0%, rgba(7,100,197,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f8ce4', endColorstr='#0764c5', GradientType=0 );
+}
+.icon-teamviewer:before{
+  content: '';
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  background: #fff;
+}
+.icon-teamviewer:after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0 19px 10px 19px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #0a78d8;
+  top: 15px;
+  left: 6px;
+}
+.icon-teamviewer-sub{
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px 19px 0 19px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #0a78d8;
+  top: 25px;
+  left: 6px;
+}
+.icon-teamviewer-sub:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 18px 7px 0 7px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #fff;
+  top: -7px;
+  left: -7px;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+}
+.icon-teamviewer-sub:after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0 7px 18px 7px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #fff;
+  top: -30px;
+  left: -7px;
+  z-index: 1;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+}
+.item-bg-sk-icon>.icon-teamviewer{
+  -webkit-transform: scale(0.35) translate(-73%, -73%);
+          transform: scale(0.35) translate(-73%, -73%);
+}
+
+.icon-skype{
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border-radius: 50%;
+  top: 0;
+}
+.icon-skype:before{
+  content: "S";
+  font-family: "Arial";
+  font-size: 30px;
+  color: #0078d7;
+  text-shadow: 2px 0 #0078d7;
+  text-indent: 7px;
+  line-height: 39px;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+.icon-skype:after{
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border-radius: 50%;
+  left: 17px;
+  top: 17px;
+  z-index: -1;
+}
+
+.icon-mPhone{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 6px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 12%;
+  top: 0;
+}
+.icon-mPhone:before{
+  content: "";
+  width: 8px;
+  height: 14px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 20%;
+  position: absolute;
+  left: -7px;
+  top: 5px;
+}
+.icon-mPhone:after{
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 2px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 2px 5px 2px 5px;
+  border-radius: 30%;
+  left: -7px;
+  top: 18px;
+  z-index: -1;
+  -webkit-transform: scaleY(0.6);
+          transform: scaleY(0.6);
+}
+.icon-mPhone-sub{
+  display: block;
+  position: absolute;
+  width: 13px;
+  border-style: solid;
+  border-width: 7px 0 0 3px;
+  border-color: transparent;
+  border-top-color: #fff;
+  top: 14px;
+  left: 8px;
+}
+.icon-mPhone-sub:before{
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 6px 7px 0;
+  border-color: transparent;
+  border-bottom-color: #fff;
+  width: 7px;
+  left: 9px;
+  top: -6px;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+.icon-mPhone-sub:after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background: #fff;
+  left: 14px;
+  top: -17px;
+  -webkit-transform: translateX(-35%);
+          transform: translateX(-35%);
+}
+
+.icon-baiduCloud-span{
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  top: 0;
+}
+.icon-baiduCloud-span:before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  top: 10px;
+  left: -20px;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+}
+.icon-baiduCloud-span:after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 6px solid #fff;
+  border-left-color: transparent;
+  border-radius: 50%;
+  left: 9px;
+  top: 10px;
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+}
+.icon-baiduCloud-span-sub{
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  left: 10px;
+  top: 27px;
+  -webkit-transform: translate(28%, 5%);
+          transform: translate(28%, 5%);
+}
+.icon-baiduCloud-span-sub:before{
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 20px;
+  background: #fff;
+  top: -7px;
+  left: -14px;
+  -webkit-transform: rotate(-48deg);
+          transform: rotate(-48deg);
+}
 
 .icon-default-a{
   width: 40px;
@@ -639,6 +892,10 @@
           transform: scale(0.45);
   top: -35%;
   left: -35%;
+}
+.icon-default-b.coloured-icon-default:before, .icon-default-c.coloured-icon-default:before{
+  background: #f35022;
+  box-shadow: 21px 0 0 #7fba00, 0 21px 0 #01a4ef, 21px 21px 0 #ffb900;
 }
 .icon-default-b:before{
   content: '';
