@@ -20,6 +20,8 @@ body{
   height: 100%;
   width: 100%;
   font-size: 0;
+  color: #fff;
+  font-family: sans-serif;
   font-family:"Microsoft YaHei";
 }
 /**********************任务栏*********************/
@@ -62,7 +64,6 @@ body{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: left;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -147,7 +148,6 @@ body{
   left: -21.5%;
 }
 .taskbar-right {
-  float: right;
   width: auto;
 }
 .item-r {
@@ -201,7 +201,7 @@ body{
   position: absolute;
   bottom: 40px;
   background: rgba(52, 61, 73, 0.9);
-  box-shadow: 0 0 5px 0px;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);;
   width: 160px;
   -webkit-transform: translateX(-43%);
           transform: translateX(-43%);
@@ -229,14 +229,14 @@ body{
   display: -ms-flexbox;
   display: flex;
 }
-.resp-max620.item-bg-sk{
+.resp-max640.item-bg-sk{
   display: none;
 }
-@media (max-width: 620px) {
-  .resp-min620.item-bg {
+@media (max-width: 640px) {
+  .resp-min640.item-bg {
     display: none;
   }
-  .resp-max620.item-bg-sk {
+  .resp-max640.item-bg-sk {
     display: block;
   }
 }
@@ -249,7 +249,7 @@ body{
     width: 240px;
     height: auto;
     background: rgba(30, 37, 46, 0.85);
-    box-shadow: 0 0 5px 0px;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);;
     z-index: -10;
   }
   .items-task.resp-pos486>.item-task{
@@ -402,7 +402,7 @@ body{
 }
 #begin-menu-switch:checked+.begin-menu{
   bottom: 40px;
-  height: 80%;
+  height: 520px;
   visibility: visible;
   opacity: 1;
   -webkit-transition: height,bottom 0.5s,0.5s;
@@ -411,10 +411,7 @@ body{
           transition-timing-function: cubic-bezier(0, 1, 0, 1);
 }
 #bm-col-3-content>.sub-content>.boxes>.box{
-  margin-top: 15px!important;
-}
-#bm-col-2-content>.item-bm{
-  margin-top: 5px;
+  margin-top: 20px!important;
 }
 #begin-menu-switch:checked+.begin-menu>#bm-col-3>#bm-col-3-content>.sub-content>.boxes>.box{
   margin-top: 2px!important;
@@ -477,14 +474,30 @@ body{
   height: 34px;
   box-sizing: border-box;
   padding: 2px 5px 2px 16px;
+  position: relative;
+}
+#bm-col-2-content>.item-bm:not(.section-title):before{
+  content: attr(data-title);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 30px;
+  position: absolute;
+  width: 175px;
+  height: 30px;
+  left: 54px;
 }
 .bm-col-2-icon{
   height: 30px;
   width: 30px;
   background: #515c6b;
   display: inline-block;
+  overflow: hidden;
+  position: relative;
 }
-#bm-col-2-content>.item-bm.section-title{
+#bm-col-2-content>.item-bm.section-title:before{
+  content: attr(data-title);
   font-size: 12px;
   color: #fff;
   line-height: 35px;
