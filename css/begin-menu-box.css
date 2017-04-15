@@ -617,10 +617,12 @@
   border-radius: 15%;
   top: 0;
   margin: 15px 15px;
+  transform: scale(0.9);
 }
 #box-BBC-span:before{
   content: "BBC";
   letter-spacing: 8px;
+  line-height: 1.1em;
   text-indent: 3px;
   font-family: "Century Gothic";
   background-color: #fff;
@@ -649,14 +651,17 @@
 #box-chrome-span{
   top: 20px;
   left: 20px;
+  transform: scale(0.8);
 }
 #box-atom-span{
   top: 18px;
   left: 18px;
+  transform: scale(0.8);
 }
 #box-kugou-span{
   top: 18px;
   left: 20px;
+  transform: scale(0.8);
 }
 #box-groove-span{
   top: 33px;
@@ -813,4 +818,5 @@
 #box-eclipse-span{
   top: 23px;
   left: 26px;
+  transform: scale(0.8);
 }
